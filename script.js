@@ -43,7 +43,7 @@ function createHeartRain() {
 
 // FITUR BARU: Love Counter
 function updateLoveCounter() {
-    const startDate = new Date('2025-01-17'); // SESUAIKAN TANGGAL JADIANMU
+    const startDate = new Date('2025-02-6'); // SESUAIKAN TANGGAL JADIANMU
     const now = new Date();
     const diffTime = Math.abs(now - startDate);
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
