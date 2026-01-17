@@ -419,7 +419,7 @@ function startPhotoShow() {
             <div class="photo-frames-container">
                 ${framesHTML}
             </div>
-            <div class="photo-strip-footer">💕 BIRTHDAY MEMORIES 💕</div>
+            <div class="photo-strip-footer">💕 MEMORIES 💕</div>
         </div>
         <div class="scroll-indicator">⬇ Scroll Down ⬇</div>
     `;
@@ -608,7 +608,7 @@ function initializeMusicPlayer() {
             </div>
             <div class="music-info">
                 <div class="current-playlist">Now Playing: Birthday Special Mix</div>
-                <div class="playlist-description">Lagu-lagu spesial untuk hari istimewa kamu ✨</div>
+                <div class="playlist-description">Lagu-lagu spesial untuk hari istimewa ✨</div>
             </div>
         </div>
     `;
@@ -653,7 +653,7 @@ function loadSpotifyPlaylist(playlistNumber) {
             // Ganti dengan playlist pertama kamu
             embedUrl: 'https://open.spotify.com/embed/playlist/6rTsjfDM7S0Ivn95NScbn0?si=40a527681bc6406d',
             name: 'DEWA 19',
-            description: 'Lagu-lagu spesial untuk hari istimewa kamu ✨'
+            description: 'Lagu-lagu spesial untuk hari istimewa ✨'
         },
         2: {
             // Ganti dengan playlist kedua kamu
