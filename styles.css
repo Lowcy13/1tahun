@@ -1302,3 +1302,58 @@ body {
     animation: glow 2s ease-in-out infinite;
 }
 
+/* Gabungkan dengan style lanamu */
+/* ... (Style lama kamu tetap di sini) ... */
+
+/* FITUR BARU: Animasi Hujan Hati */
+.heart-particle {
+    position: fixed;
+    top: -10px;
+    color: #ff4d6d;
+    font-size: 20px;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(105vh) rotate(360deg); }
+}
+
+/* FITUR BARU: Tombol Start Berdetak */
+.start-btn {
+    animation: heartbeat 1.5s ease-in-out infinite;
+    background: #ff4d6d !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
+}
+
+.love-counter {
+    background: rgba(0,0,0,0.2);
+    padding: 5px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.click-heart {
+    position: fixed;
+    color: #ff4d6d;
+    pointer-events: none;
+    z-index: 1000;
+    animation: clickRise 1s ease-out forwards;
+}
+
+@keyframes clickRise {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-50px) scale(1.5); }
+}
