@@ -1,4 +1,4 @@
-// Game state management
+
 let currentScreen = 'loading';
 let tetrisGame = null;
 let gameScore = 0;
@@ -14,7 +14,42 @@ let playbackInterval = null;
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
+    createHeartRain();
+    updateLoveCounter();
+    console.log("%cHI SAYANG! ❤️", "color: #ff4d6d; font-size: 30px; font-weight: bold;");
 });
+
+document.addEventListener('click', function(e) {
+    const heart = document.createElement('div');
+    heart.className = 'click-heart';
+    heart.innerHTML = '❤️';
+    heart.style.left = (e.clientX - 10) + 'px';
+    heart.style.top = (e.clientY - 10) + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1000);
+});
+
+function createHeartRain() {
+    setInterval(() => {
+        const heart = document.createElement('div');
+        heart.classList.add('heart-particle');
+        heart.innerHTML = ['❤️','💖','✨','🌸'][Math.floor(Math.random()*4)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => { heart.remove(); }, 5000);
+    }, 400);
+}
+
+// FITUR BARU: Love Counter
+function updateLoveCounter() {
+    const startDate = new Date('2025-01-17'); // SESUAIKAN TANGGAL JADIANMU
+    const now = new Date();
+    const diffTime = Math.abs(now - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+    const counterEl = document.getElementById('days-count');
+    if(counterEl) counterEl.innerText = `${diffDays} Hari Bersama`;
+}
 
 function initializeApp() {
     showScreen('loading');
@@ -141,6 +176,12 @@ function initializeMainScreen() {
             this.style.transform = '';
         });
     });
+    const hour = new Date().getHours();
+const startText = document.querySelector('.start-text');
+
+    if (hour >= 19 || hour < 5) {
+    if (startText) startText.innerHTML = "Sudah malam, jangan lupa istirahat ya Sayang. Love you! ✨";
+}
 }
 
 function showScreen(screenName) {
@@ -263,7 +304,10 @@ function skipTypewriter() {
         clearInterval(typewriterInterval);
         const messageContent = document.querySelector('.message-content');
         if (messageContent) {
-            const fullMessage = `Hi Cel,<br><br>Happy Birthday!<br><br>Hari ini aku pengen kamu ngerasain semua hal positif dan keajaiban yang cuma bisa didapetin kalo kamu ada di dunia ini. Semoga segala keinginanmu tercapai, apalagi yang kocak-kocak dan gak biasa, karena kamu tuh unik banget! Aku selalu percaya kalau kamu bisa melewati semua tantangan dengan kekuatan dan semangat yang luar biasa.<br><br>Terima kasih udah jadi bagian hidup aku yang paling berharga. Kamu bener-bener bikin hari-hari aku jadi lebih berarti dan penuh warna. Semoga di tahun yang baru ini, kamu makin bahagia, makin sukses, dan tentunya makin cantik (walaupun udah cantik banget sih!).<br><br>I love you so much! 💕`;
+            const fullMessage = `Hari ini 1 tahun mki sama nda di rasa na dan harapan ku toh semoga bisaki menjadi lebih baik dalam segala hal dan tetap saling membantu dan menutupi segala kekurangan masing masing 
+dan semoga apa yg di harapkan sama sama bisa terwujud hehe 
+
+I love you so much! 💕`;
             messageContent.innerHTML = fullMessage;
             isTyping = false;
             messageContent.scrollTop = messageContent.scrollHeight;
