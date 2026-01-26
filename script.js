@@ -43,12 +43,29 @@ function createHeartRain() {
 
 // FITUR BARU: Love Counter
 function updateLoveCounter() {
-    const startDate = new Date('2025-02-6'); // SESUAIKAN TANGGAL JADIANMU
-    const now = new Date();
-    const diffTime = Math.abs(now - startDate);
+    const startDate = new Date(2025, 1, 6); 
+    const today = new Date();
+    const diffTime = today.getTime() - startDate.getTime();
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
-    const counterEl = document.getElementById('days-count');
-    if(counterEl) counterEl.innerText = `${diffDays} Hari Bersama`;
+
+    const countElement = document.getElementById('days-count');
+    if (countElement) {
+        countElement.innerText = diffDays + " Hari Bersama";
+    }
+
+    // Update Pesan Malam
+    const hour = today.getHours();
+    const nightMsg = document.getElementById('night-message');
+    if (nightMsg) {
+        // Jika jam 7 malam sampai jam 5 pagi
+        if (hour >= 19 || hour < 5) {
+            nightMsg.innerHTML = "Sudah malam, jangan lupa istirahat ya Sayang. Love you! ✨";
+            nightMsg.style.display = 'block';
+        } else {
+            nightMsg.innerHTML = ""; // Kosongkan jika siang hari
+            nightMsg.style.display = 'none';
+        }
+    }
 }
 
 function initializeApp() {
@@ -176,12 +193,7 @@ function initializeMainScreen() {
             this.style.transform = '';
         });
     });
-    const hour = new Date().getHours();
-const startText = document.querySelector('.start-text');
 
-    if (hour >= 19 || hour < 5) {
-    if (startText) startText.innerHTML = "Sudah malam, jangan lupa istirahat ya Sayang. Love you! ✨";
-}
 }
 
 function showScreen(screenName) {
