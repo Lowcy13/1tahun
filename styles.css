@@ -6,9 +6,8 @@
 }
 
 body {
-    font-family: 'Courier New', monospace;
-    background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #2b1d31 0%, #1a1a2e 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,88 +58,80 @@ body {
 
 /* Loading Screen Styles */
 #loading-screen {
-    background: #000;
-    color: #00ff00;
+    /* Latar belakang menggunakan gradasi mewah sesuai tema bodi */
+    background: radial-gradient(circle at center, #2b1d31 0%, #1a1a2e 100%);
+    color: #ff8fa3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #loading-screen .gameboy-screen {
     width: 600px;
     height: 400px;
-    background: #000;
-    border: 4px solid #00ff00;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    background: rgba(255, 255, 255, 0.05); /* Transparansi modern */
+    border: 4px solid #ffafcc; /* Bingkai Pink Mewah */
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255, 175, 204, 0.3);
 }
 
 #loading-screen .screen-content {
     text-align: center;
     width: 100%;
-    padding: 40px;
+    padding: 10px;
 }
 
 #loading-screen .title {
-    font-size: 48px;
-    font-weight: bold;
-    color: #00ff00;
+    font-family: 'Pacifico', cursive; /* Font indah tulisan tangan */
+    font-size: 48px !important;
+    color: #ff8fa3;
     margin-bottom: 40px;
-    letter-spacing: 4px;
-    animation: titleGlow 2s ease-in-out infinite alternate; /* Tambahkan ini */
+    letter-spacing: 2px;
+    /* Memanggil animasi neon pink yang sudah Anda buat sebelumnya */
+    animation: titleGlow 2s ease-in-out infinite alternate; 
 }
-
-/* Tambahkan keyframe ini */
 @keyframes titleGlow {
     from {
-        text-shadow: 0 0 10px #00ff00;
+        /* Cahaya pink lembut saat redup */
+        text-shadow: 0 0 10px #ff8fa3, 0 0 20px rgba(255, 143, 163, 0.3);
     }
     to {
-        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+        /* Cahaya pink terang yang kuat (glow) */
+        text-shadow: 0 0 20px #ff4d6d, 0 0 30px #ff8fa3, 0 0 40px #ffb7c5;
     }
 }
 
 #loading-screen .loading-text {
+    font-family: 'VT323', monospace; /* Font retro komputer */
     font-size: 24px;
-    color: #00ff00;
-    margin-bottom: 30px;
-    text-align: left;
-    padding-left: 20px;
+    color: #ffcad4;
+    margin-bottom: 10px;
+    text-align: center;
     animation: blink 1s infinite;
-    transition: opacity 0.3s ease; /* Tambahkan ini */
 }
 
 .progress-bar {
     width: 80%;
-    height: 30px;
-    background: #333;
-    border: 2px solid #00ff00;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffcad4;
     margin: 0 auto 30px;
-    position: relative;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    background: #00ff00;
-    width: 38%;
+    /* Gradasi isi bar dari Pink Muda ke Deep Pink */
+    background: linear-gradient(90deg, #ffb7c5, #ff4d6d);
+    width: 0%;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
     transition: width 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Tambahkan efek shine */
-.progress-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    animation: shine 2s infinite;
-}
+
 
 @keyframes shine {
     0% { left: -100%; }
@@ -152,9 +143,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #000;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     font-weight: bold;
-    font-size: 16px;
+    font-size: large;
 }
 
 #loading-screen .smile-text {
@@ -206,15 +198,15 @@ body {
 
 /* Main Gameboy Styles */
 .gameboy-body {
-    width: 400px;
-    height: 600px;
-    background: linear-gradient(145deg, #e8e8e8, #d0d0d0);
-    border-radius: 20px 20px 40px 40px;
-    padding: 20px;
+    width: 350px;
+    height: 570px;
+    background: linear-gradient(145deg, #fffcf2, #f8f0fb); /* Putih gading lembut */
+    border-radius: 20px 20px 50px 20px;
+    padding: 25px;
     box-shadow: 
-        0 20px 40px rgba(0,0,0,0.3),
-        inset 0 2px 4px rgba(255,255,255,0.8),
-        inset 0 -2px 4px rgba(0,0,0,0.2);
+        0 20px 50px rgba(255, 183, 197, 0.4), 
+        inset 0 -5px 10px rgba(255, 175, 204, 0.2);
+    border: 3px solid #ffcad4;
     position: relative;
 }
 
@@ -223,8 +215,9 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
-    font-size: 12px;
-    color: #666;
+    color: #b5838d;
+    font-size: 11px;
+    font-weight: bold;
 }
 
 .power-indicator {
@@ -248,12 +241,12 @@ body {
 .gameboy-screen {
     width: 100%;
     height: 200px;
-    background: #2d5016;
-    border: 8px solid #1a1a1a;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background: #d8e2dc; /* Sage Green yang lembut */
+    border: 10px solid #ffafcc; /* Bingkai Pink Mewah */
+    border-radius: 12px;
+    margin-bottom: 25px;
     position: relative;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
 }
 
 /* Gameboy elements staggered entry */
@@ -306,25 +299,35 @@ body {
 }
 
 .gameboy-screen .screen-content {
-    padding: 20px;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Menyebar elemen ke atas, tengah, dan bawah */
     align-items: center;
+    padding: 8px 8px;
+    height: 100%;
     text-align: center;
 }
-
-.birthday-title {
-    color: #9bbc0f;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px #9bbc0f;
+.days-count {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 18px !important;
+    color: #ff4d6d !important;
+    margin-top: 2px;
 }
-
+.birthday-title {
+    font-family: 'Pacifico', cursive; /* Gaya tulisan tangan */
+    color: #ff4d6d; /* Deep Pink */
+    font-size: 26px !important;
+    text-shadow: 2px 2px 8px rgba(255, 77, 109, 0.4);
+    margin-top: 10px;
+    animation: romanticGlow 2s ease-in-out infinite alternate;
+}
+@keyframes romanticGlow {
+    from { text-shadow: 0 0 5px #ffafcc, 0 0 10px #ffafcc; }
+    to { text-shadow: 0 0 15px #ff4d6d, 0 0 20px #ff8fa3; }
+}
 .start-text {
-    color: #ffff00;
+    color: #ff4d6d;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -358,27 +361,32 @@ body {
 .menu-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .menu-btn {
-    padding: 15px;
+    padding: 12px;
     border: none;
     border-radius: 8px;
     font-family: inherit;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 11px;
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-transform: uppercase; /* Ensure consistent text formatting */
-    letter-spacing: 0.5px; /* Better letter spacing */
+    transition: 0.3s;
+    color: #594157;
+    text-transform: uppercase;
+    box-shadow: 0 4px #d4a37333;
 }
+.message-btn { background: #ffc8dd; }
+.gallery-btn { background: #ffafcc; }
+.music-btn   { background: #bde0fe; }
+.tetris-btn  { background: #a2d2ff; }
 
 .menu-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .menu-btn:active {
@@ -444,10 +452,7 @@ body {
 }
 
 .dpad-center {
-    width: 100%;
-    height: 100%;
-    background: #333;
-    position: relative;
+    background: #b5838d; /* Dusty Rose */
     border-radius: 8px;
 }
 
@@ -507,16 +512,14 @@ body {
 }
 
 .action-btn {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border: none;
     border-radius: 50%;
-    font-family: inherit;
+    background: linear-gradient(145deg, #ff8fa3, #ff4d6d);
+    color: white;
     font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px #fb6f92;
 }
 
 .action-btn:hover {
@@ -547,15 +550,10 @@ body {
 }
 
 .control-btn {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    background: #666;
+    background: #e5989b;
     color: white;
-    font-family: inherit;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    font-size: 9px;
+    font-weight: 800;
 }
 
 .control-btn:hover {
@@ -1339,12 +1337,23 @@ body {
 }
 
 .love-counter {
-    background: rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.4); /* Transparansi putih lembut */
+    border: 1px solid rgba(255, 77, 109, 0.3);
+    border-radius: 15px;
     padding: 5px;
-    border-radius: 4px;
-    margin: 5px 0;
+    width: 90%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* Efek kaca */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-
+.counter-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    color: #b5838d; /* Warna Rose Gold redup */
+    text-transform: uppercase;
+}
 .click-heart {
     position: fixed;
     color: #ff4d6d;
@@ -1352,7 +1361,16 @@ body {
     z-index: 1000;
     animation: clickRise 1s ease-out forwards;
 }
-
+.night-only-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px !important;
+    color: #7b68ee; /* Lavender Blue untuk kesan tenang */
+    line-height: 1.4;
+    padding: 0 15px;
+    margin-bottom: 2px;
+}
 @keyframes clickRise {
     0% { opacity: 1; transform: translateY(0) scale(1); }
     100% { opacity: 0; transform: translateY(-50px) scale(1.5); }
