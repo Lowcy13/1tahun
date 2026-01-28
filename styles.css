@@ -55,7 +55,11 @@ body {
     transform: translateY(0);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media screen and (max-width: 574px) {
+    .gameboy-body {
+        transform: scale(0.7); /* Mengecilkan ukuran Gameboy di layar kecil */
+    }
+}
 /* Loading Screen Styles */
 #loading-screen {
     /* Latar belakang menggunakan gradasi mewah sesuai tema bodi */
