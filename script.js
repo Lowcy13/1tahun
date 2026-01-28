@@ -59,13 +59,36 @@ function updateLoveCounter() {
     if (nightMsg) {
         // Jika jam 7 malam sampai jam 5 pagi
         if (hour >= 19 || hour < 5) {
-            nightMsg.innerHTML = "Sudah malam, jangan lupa istirahat ya Sayang. Love you! ✨";
+            nightMsg.innerHTML = "Sudah malam, jangan lupa istirahat ya Sayang. Love you! ❤️";
             nightMsg.style.display = 'block';
         } else {
             nightMsg.innerHTML = ""; // Kosongkan jika siang hari
             nightMsg.style.display = 'none';
         }
     }
+}
+let secretClickCount = 0;
+
+// Cari tombol A di Gameboy Anda
+const aBtn = document.querySelector('.a-btn'); 
+
+if (aBtn) {
+    aBtn.addEventListener('click', function() {
+        secretClickCount++;
+        
+        // Jika ditekan 3 kali, buka halaman bunga
+        if (secretClickCount === 3) {
+            // Beri efek getar/flash sedikit sebelum pindah
+            document.querySelector('.gameboy-screen').style.filter = 'brightness(2)';
+            
+            setTimeout(() => {
+                window.location.href = 'flower.html';
+            }, 300);
+        }
+        
+        // Reset hitungan jika tidak ditekan lagi dalam 2 detik
+        setTimeout(() => { secretClickCount = 0; }, 2000);
+    });
 }
 
 function initializeApp() {
