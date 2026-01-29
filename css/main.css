@@ -1689,18 +1689,6 @@ body {
 /* Penyesuaian Responsif untuk HP */
 /* Penyesuaian khusus untuk tampilan HP agar lebih proporsional */
 @media screen and (max-width: 574px) {
-    .flower {
-      bottom: 25vh !important;
-    }
-    .long-g {
-      bottom: 25vh !important;
-    }
-
-    .grass-clump {
-    position: absolute;
-    bottom: 40vh; /* Menaikkan rumput depan agar tidak menutupi tombol atau terpotong */
-    z-index: 250;
-    }
     .message {
         top: 2vh; 
     }
