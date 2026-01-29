@@ -1719,12 +1719,12 @@ body {
     }
 
     .message h1 {
-        font-size: 3.2rem; /* Mengecilkan judul agar tidak memakan ruang */
+        font-size: 2.2rem; /* Mengecilkan judul agar tidak memakan ruang */
         margin-bottom: 1vmin;
     }
 
     .message p {
-        font-size: 1rem; /* Mengecilkan teks deskripsi agar lebih rapi */
+        font-size: 0.85rem; /* Mengecilkan teks deskripsi agar lebih rapi */
         line-height: 1.4;
         margin-top: 2vmin:
         padding: 0 10vmin; /* Memberi jarak agar teks tidak menyentuh pinggir layar */
