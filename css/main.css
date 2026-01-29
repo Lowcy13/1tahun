@@ -40,7 +40,7 @@ body {
   top: 0;
   transform: translateX(-50%);
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   filter: blur(0.1vmin);
   overflow: hidden;
   position: fixed;
