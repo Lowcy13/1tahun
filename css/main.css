@@ -1713,9 +1713,9 @@ body {
 
 /* Penyesuaian Responsif untuk HP */
 @media screen and (max-width: 574px) {
-    .message h1 { font-size: 5rem; }
-    .message p { font-size: 2rem; padding: 0 10vmin; }
-    .message { top: 10vmin; }
+    .message h1 { font-size: 4rem; }
+    .message p { font-size: 2rem; padding: 0 5vmin; }
+    .message { top: 5vmin; }
 }
 .container * {
   -webkit-animation-play-state: paused !important;
