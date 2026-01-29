@@ -29,7 +29,7 @@ body {
   overflow: hidden;
   perspective: 1000px;
   position: hidden;
-  touch-action: nonel;
+  touch-action: none;
   /* Gradasi radial untuk efek kedalaman layar */
   background-image: radial-gradient(circle at center, #2b1d31 0%, #1a1a2e 100%);
 }
@@ -1714,18 +1714,26 @@ body {
 /* Penyesuaian Responsif untuk HP */
 /* Penyesuaian khusus untuk tampilan HP agar lebih proporsional */
 @media screen and (max-width: 574px) {
+  .flower {
+        bottom: 25vh !important; /* Menaikkan bunga ke 25% tinggi layar */
+    }
+    
+    .flowers {
+        transform: scale(0.8); /* Mengecilkan sedikit agar tidak terlalu penuh */
+    }
     .message {
-        top: 8vmin; /* Menaikkan sedikit posisi teks ke atas */
+        top: 15vh; /* Menaikkan sedikit posisi teks ke atas */
     }
 
     .message h1 {
-        font-size: 2.2rem; /* Mengecilkan judul agar tidak memakan ruang */
+        font-size: 3.2rem; /* Mengecilkan judul agar tidak memakan ruang */
         margin-bottom: 1vmin;
     }
 
     .message p {
-        font-size: 0.85rem; /* Mengecilkan teks deskripsi agar lebih rapi */
+        font-size: 2rem; /* Mengecilkan teks deskripsi agar lebih rapi */
         line-height: 1.4;
+        margin-top: 2vmin:
         padding: 0 10vmin; /* Memberi jarak agar teks tidak menyentuh pinggir layar */
     }
 }
