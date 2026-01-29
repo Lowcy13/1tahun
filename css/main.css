@@ -1698,7 +1698,7 @@ body {
 
     .grass-clump {
     position: absolute;
-    bottom: 25vh; /* Menaikkan rumput depan agar tidak menutupi tombol atau terpotong */
+    bottom: 40vh; /* Menaikkan rumput depan agar tidak menutupi tombol atau terpotong */
     z-index: 250;
     }
     .message {
