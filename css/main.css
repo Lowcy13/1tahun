@@ -1714,15 +1714,8 @@ body {
 /* Penyesuaian Responsif untuk HP */
 /* Penyesuaian khusus untuk tampilan HP agar lebih proporsional */
 @media screen and (max-width: 574px) {
-  .flower {
-        bottom: 25vh !important; /* Menaikkan bunga ke 25% tinggi layar */
-    }
-    
-    .flowers {
-        transform: scale(0.8); /* Mengecilkan sedikit agar tidak terlalu penuh */
-    }
     .message {
-        top: 15vh; /* Menaikkan sedikit posisi teks ke atas */
+        top: 2vh; 
     }
 
     .message h1 {
@@ -1731,7 +1724,7 @@ body {
     }
 
     .message p {
-        font-size: 2rem; /* Mengecilkan teks deskripsi agar lebih rapi */
+        font-size: 1rem; /* Mengecilkan teks deskripsi agar lebih rapi */
         line-height: 1.4;
         margin-top: 2vmin:
         padding: 0 10vmin; /* Memberi jarak agar teks tidak menyentuh pinggir layar */
