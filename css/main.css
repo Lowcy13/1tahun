@@ -50,37 +50,12 @@ body {
       ellipse at top,
       transparent 0%,
       var(--dark-color)
-    ),
-    /* Mengubah pendaran bawah dari biru ke pink transparan */
-    radial-gradient(
-      ellipse at bottom,
-      var(--dark-color),
-      rgba(255, 175, 204, 0.2)
-    ),
-    repeating-linear-gradient(
-      220deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    repeating-linear-gradient(
-      189deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    repeating-linear-gradient(
-      148deg,
-      rgb(0, 0, 0) 0px,
-      rgb(0, 0, 0) 19px,
-      transparent 19px,
-      transparent 22px
-    ),
-    /* Mengubah gradasi cakrawala dari cyan ke Pink Rose & Putih Gading */
-    linear-gradient(90deg, #ff8fa3, #f0f0f0);
+    ),background-image: 
+    radial-gradient(ellipse at top, rgba(43, 29, 49, 0.5) 0%, var(--dark-color) 100%),
+    radial-gradient(ellipse at bottom, rgba(255, 175, 204, 0.1) 0%, var(--dark-color) 80%),
+    linear-gradient(to bottom, #1a1a2e, #2b1d31);
 }
+
 
 .flowers {
   position: relative;
