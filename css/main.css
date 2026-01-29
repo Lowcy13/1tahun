@@ -1713,8 +1713,8 @@ body {
 
 /* Penyesuaian Responsif untuk HP */
 @media screen and (max-width: 574px) {
-    .message h1 { font-size: 4rem; }
-    .message p { font-size: 2rem; padding: 0 5vmin; }
+    .message h1 { font-size: 3rem; }
+    .message p { font-size: 1rem; padding: 0 5vmin; }
     .message { top: 5vmin; }
 }
 .container * {
